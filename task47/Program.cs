@@ -13,11 +13,14 @@ void PrintDouble(double[,] matrix)
     }
 }
 void InputDouble(double[,] matrix)
-{
+{       
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(0); j++)
-            matrix[i,j] = Math.Round (new Random().NextDouble()*100,1);      
+        {
+            matrix[i,j] = Math.Round (new Random().NextDouble()* 15,1);
+            matrix[i,j] = Math.Round (matrix[i,j] - 5,1);
+        }       
     }
 }
 int n = Convert.ToInt32(Console.ReadLine());
